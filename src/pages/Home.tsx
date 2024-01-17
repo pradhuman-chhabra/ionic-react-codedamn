@@ -1,7 +1,7 @@
-import { IonContent, IonHeader, IonItem, IonItemOption, IonItemOptions, IonItemSliding, IonList, IonPage, IonText, IonTitle, IonToolbar, IonLabel, IonAvatar } from '@ionic/react';
+import { IonContent, IonHeader, IonItem, IonItemOption, IonItemOptions, IonItemSliding, IonList, IonPage, IonText, IonTitle, IonToolbar, IonLabel, IonAvatar, IonButton, IonIcon, IonInput } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
-
+import { star } from "ionicons/icons"
 
 const arr = [
   {
@@ -49,6 +49,24 @@ const Home: React.FC = () => {
               </IonItemOptions>
             </IonItemSliding>))}
         </IonList>
+      </IonContent>
+      <IonContent className='ion-padding'>
+        {/* This className padding provides us the padding necessary */}
+        <IonButton color='primary'>
+          Hello world
+        </IonButton>
+      </IonContent>
+      <IonContent className='ion-padding'>
+        <IonButton expand="full" color='tertiary'>
+          <IonIcon slot="end" icon={star}>
+          </IonIcon>
+          Hello world
+        </IonButton>
+      </IonContent>
+      <IonContent>
+        <IonInput value={"Enter the value here"}>
+
+        </IonInput>
       </IonContent>
     </IonPage >
   );
